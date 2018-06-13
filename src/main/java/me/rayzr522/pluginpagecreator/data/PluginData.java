@@ -17,9 +17,10 @@ public class PluginData {
     private Set<Website> websites = Collections.emptySet();
     private Set<Command> commands = Collections.emptySet();
     private Set<Permission> permissions = Collections.emptySet();
+    private Set<Dependency> dependencies = Collections.emptySet();
     private Set<Section> sections = Collections.emptySet();
 
-    public PluginData(String name, String blurb, String description, GitHubRepository gitHubRepository, Set<Website> websites, Set<Command> commands, Set<Permission> permissions, Set<Section> sections) {
+    public PluginData(String name, String blurb, String description, GitHubRepository gitHubRepository) {
         this.name = name;
         this.blurb = blurb;
         this.description = description;
@@ -28,6 +29,7 @@ public class PluginData {
         this.commands = commands;
         this.permissions = permissions;
         this.sections = sections;
+        this.dependencies = dependencies;
     }
 
     public String getName() {
@@ -50,16 +52,56 @@ public class PluginData {
         return websites;
     }
 
+    public void setWebsites(Set<Website> websites) {
+        this.websites = websites;
+    }
+
+    public void addWebsite(Website website) {
+        websites.add(website);
+    }
+
     public Set<Command> getCommands() {
         return commands;
+    }
+
+    public void setCommands(Set<Command> commands) {
+        this.commands = commands;
+    }
+
+    public void addCommand(Command command) {
+        commands.add(command);
     }
 
     public Set<Permission> getPermissions() {
         return permissions;
     }
 
+    public void setPermissions(Set<Permission> permissions) {
+        this.permissions = permissions;
+    }
+
+    public void addPermission(Permission permission) {
+        permissions.add(permission);
+    }
+
     public Set<Section> getSections() {
         return sections;
+    }
+
+    public void setSections(Set<Section> sections) {
+        this.sections = sections;
+    }
+
+    public void addSection(Section section) {
+        sections.add(section);
+    }
+
+    public void setDependencies(Set<Dependency> dependencies) {
+        this.dependencies = dependencies;
+    }
+
+    public void addDependency(Dependency dependency) {
+        dependencies.add(dependency);
     }
 
     @Override
