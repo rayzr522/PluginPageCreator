@@ -11,12 +11,22 @@
 
     <properties>
         <app.entry>me.rayzr522.pluginpagecreator.PluginPageCreator</app.entry>
+        <app.java.version>1.8</app.java.version>
     </properties>
 
 <build>
     <finalName>${project.name}-${project.version}</finalName>
     <defaultGoal>clean package</defaultGoal>
     <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.6.1</version>
+            <configuration>
+                <source>${app.java.version}</source>
+                <target>${app.java.version}</target>
+            </configuration>
+        </plugin>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
