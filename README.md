@@ -6,12 +6,8 @@ This tool will allow you to easily convert raw data about commands, configs, etc
 
 ## Installation
 
-*TBA*
+_TBA_
 
 ## Usage
 
-*TBA*
-
-## Join Me
-
-[![Discord Badge](https://github.com/Rayzr522/ProjectResources/raw/master/RayzrDev/badge-small.png)](https://discord.io/rayzrdevofficial)
+_TBA_
